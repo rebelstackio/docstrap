@@ -1,0 +1,3 @@
+## Docstrap
+
+Documentation generator.

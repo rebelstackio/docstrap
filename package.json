@@ -1,0 +1,31 @@
+{
+	"name": "docstrap",
+	"version": "1.0.1",
+	"description": "Documentation generator",
+	"main": "index.js",
+	"preferGlobal": true,
+	"bin": {
+		"docstrap": "index.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rebelstackio/docstrap.git"
+	},
+	"keywords": [
+		"nodejs",
+		"documentation",
+		"generator"
+	],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rebelstackio/docstrap/issues"
+	},
+	"homepage": "https://github.com/rebelstackio/docstrap#readme",
+	"dependencies": {
+		"commander": "^5.0.0"
+	}
+}
