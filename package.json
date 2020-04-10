@@ -26,6 +26,7 @@
 	},
 	"homepage": "https://github.com/rebelstackio/docstrap#readme",
 	"dependencies": {
-		"commander": "^5.0.0"
+		"commander": "^5.0.0",
+		"gradient-string": "^1.2.0"
 	}
 }
