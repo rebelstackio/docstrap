@@ -19,6 +19,17 @@
 		"documentation",
 		"generator"
 	],
+	"contributors": [
+		{
+			"name": "pablolimo",
+			"url": "https://github.com/pablolimo"
+		},
+		{
+			"name": "Osmar Reyes",
+			"email": "osmarreyesst@gmail.com",
+			"url": "https://github.com/oreyes1991"
+		}
+	],
 	"author": "",
 	"license": "MIT",
 	"bugs": {
@@ -27,6 +38,7 @@
 	"homepage": "https://github.com/rebelstackio/docstrap#readme",
 	"dependencies": {
 		"commander": "^5.0.0",
+		"fs-extra": "^9.0.0",
 		"gradient-string": "^1.2.0"
 	}
 }

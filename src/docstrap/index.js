@@ -1,5 +1,7 @@
 (() => {
 	const _options = require('./options');
+	const { writeTemplate } = require('../lib');
+
 	function docstrap(program) {
 		const commandObject = program
 		.description('create documentation webview in a dir, or docs/ if no dir supplied')
@@ -10,11 +12,17 @@
 		});
 
 		commandObject.action((dir) => {
-			console.log('start action');
+			//console.log('start action');
 			if (commandObject.dir) {
-				console.log('with dir =>', commandObject.dir)
+				//console.log('with dir =>', commandObject.dir)
+				writeTemplate(commandObject.dir, () => {
+
+				})
 			} else {
-				console.log('default docs folder')
+				writeTemplate('docs/', () => {
+
+				})
+				//console.log('default docs folder')
 			}
 			process.exit(0);
 		});
