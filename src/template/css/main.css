@@ -2,13 +2,19 @@
 :root {
 	--custom-border-radius: 6px;
 	--clear-color: ghostwhite;
+	/* purple theme */
 	--main-color: #84099e;
-	--main-color-light: rgba(132, 9, 158, .5); 
+	--main-color-light: rgba(132, 9, 158, .5);
+	/* default theme */
+	--default-d-color: #09569e;
+	--default-d-color-light: rgba(9, 86, 158, .5);
+	/* dark theme*/
+
 	--dark-color: #333333;
-	--custom-green: #28B862;
 	--custom-blue: #00a4df;
 	--custom-red: #f56954;
 }
+
 html, body {
 	background-color: var(--clear-color);
 	margin: 0;
@@ -36,7 +42,7 @@ body {
 	display: grid;
 	grid-template-columns: .5fr 4fr 1fr;
 	padding: 14px 10px;
-	background-color: #84099e;
+	background-color: var(--default-d-color);
 	color: #fff;
 	column-gap: 10px;
 	z-index: 100;
@@ -52,10 +58,8 @@ body {
 
 .main-header .logo > img {
 	padding: 10px;
-	background-color: rgba(0,0,0,.5);
 	box-sizing: border-box;
 	width: 70px;
-	border-radius: 50%;
 }
 
 .main-header .logo {
@@ -84,7 +88,7 @@ body {
 	user-select: none;
 }
 
-.main-header .items > *:not(.active):hover { 
+.main-header .items > *:not(.active):hover {
 	color: #fff;
 }
 
