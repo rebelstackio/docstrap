@@ -27,12 +27,15 @@
 		const _config = getConfigFile();
 		fromDir(_currenBase + '/' + dir + '/', new RegExp('\.(html)$'),(fn) => {
 			console.log(fn);
-			//const _htmlView = fs.readFileSync(fn)
+			const _htmlView = fs.readFileSync(fn, 'utf8')
+			parseConfigToHTML(_htmlView, _config, (newHTML) => {
+				fs.writeFileSync(fn, newHTML)
+			});
 		})
-		const _homeView = fs.readFileSync(_currenBase + '/' + dir + '/index.html', 'utf8');
+		/*const _homeView = fs.readFileSync(_currenBase + '/' + dir + '/index.html', 'utf8');
 		parseConfigToHTML(_homeView, _config, (newHTML) => {
 			fs.writeFileSync(_currenBase + '/' + dir + '/index.html', newHTML)
-		});
+		});*/
 	}
 	/**
 	 * get Docstrap config file, if it doesn't exist return a default one
