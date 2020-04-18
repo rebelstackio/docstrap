@@ -6,8 +6,18 @@
 
 	function writeTemplate (dir, callback) {
 		if(fs.existsSync(dir)) {
-			console.log('path exist, do you want to override?');
-			//TODO: Make override options
+			console.log('path exist, .MD files won\'t be override');
+			try {
+				fs.copySync(_libBase + 'template', _currenBase + '/' + dir, {filter: (path) => {
+					if(path.match(new RegExp('\.(md)$')) !== null) {
+						return false;
+					}
+					return true;
+				}});
+				_fillTemplate(dir);
+			} catch (err) {
+				console.log('Error writing template => ', err);
+			}
 		} else {
 			console.log('new path in =>', _currenBase + '/' + dir);
 			try {
@@ -26,16 +36,11 @@
 	function _fillTemplate(dir) {
 		const _config = getConfigFile();
 		fromDir(_currenBase + '/' + dir + '/', new RegExp('\.(html)$'),(fn) => {
-			console.log(fn);
 			const _htmlView = fs.readFileSync(fn, 'utf8')
 			parseConfigToHTML(_htmlView, _config, (newHTML) => {
 				fs.writeFileSync(fn, newHTML)
 			});
-		})
-		/*const _homeView = fs.readFileSync(_currenBase + '/' + dir + '/index.html', 'utf8');
-		parseConfigToHTML(_homeView, _config, (newHTML) => {
-			fs.writeFileSync(_currenBase + '/' + dir + '/index.html', newHTML)
-		});*/
+		});
 	}
 	/**
 	 * get Docstrap config file, if it doesn't exist return a default one

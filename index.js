@@ -5,11 +5,13 @@
 const gradient = require('gradient-string');
 const program = require('commander');
 const docstrap = require('./src/docstrap');
+const { getASCIIBanner } = require('./src/utils')
 
 program.version(require('./package.json').version);
 program.command('docstrap [dir]');
 
-console.log('\n' + gradient.rainbow('~ D O C S T R A P J S   ♥') + '\n');
+const title = getASCIIBanner();
+console.log('\n' + gradient.rainbow(title) + '\n');
 
 docstrap(program);
 

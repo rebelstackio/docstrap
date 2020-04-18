@@ -1,1 +1,4 @@
 # API Reference
+```
+[-d || --dir]
+```
