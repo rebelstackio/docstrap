@@ -49,6 +49,29 @@ body {
 	overflow-x: auto;
 }
 
+/*--------------------------- themes----------------------------------- */
+/*<purple>*/
+.docs-theme-purple .main-header {
+	background-color: var(--main-color) !important;
+}
+
+.docs-theme-purple .sumary pretty-button * {
+	color: var(--main-color-light) !important;
+	border-color: var(--main-color-light) !important;
+}
+
+.docs-theme-purple .sumary pretty-button *:hover {
+	color: var(--main-color) !important;
+	border-color: var(--main-color) !important;
+}
+
+.docs-theme-purple .benefits .porperty > svg {
+	color: var(--main-color) !important
+}
+/*</purple>*/
+
+/*---------------------------END-THEMES-------------------------------*/
+
 .main-header > .items {
 	display: grid;
 	grid-auto-flow: column;
