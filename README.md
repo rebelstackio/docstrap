@@ -84,3 +84,33 @@ this is not mandatory, it will generate the view eather way without a configurat
 +-- index.html
 ```
 Notice that there is some html files with .md files, the idea is to keep writing your documentation has you're used to, we then parse every md file to the web vew, all this is done in the client side, so you don't have to build your documentation with every change.
+
+## But what's under the hood? how does it work?
+Docstrap is really simple what it does, we have a template already make wich only changes a few parts of the web view, such as project name, description, links for repositories or related contend.
+
+It uses fs-extra to cp how the bash command ```cp -R``` would do, the template is copied to a directory you provide or docs/ folder for default.
+
+All the HTML files in the template have those configuration variables with the convection {{varName}}, as long a variable in the config file has the same name as the ones in the HTML will replace it for the variable value, so we can map how many variables to the template we want.
+
+- variable example in the template
+```html
+<title>{{name}}</title>
+```
+- variable in the config file
+```js
+..., 'name': 'Docstrap', ...
+```
+
+that is made by this util function
+
+```js
+function parseConfigToHTML(htmlSTR, config) {
+	const varMatch = htmlSTR.match(new RegExp('(?<=\{\{).+?(?=\}\})','g'));
+	let resp = htmlSTR;
+	varMatch.forEach((_v) => {
+		let value = config[_v];
+		resp = resp.replace(new RegExp(`\{\{${_v}\}\}`, 'g'), value)
+	});
+	return resp;
+}
+```

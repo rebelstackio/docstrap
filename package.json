@@ -1,6 +1,6 @@
 {
-	"name": "docstrap",
-	"version": "1.0.1",
+	"name": "@rebelstack-io/docstrap",
+	"version": "v1.0.1",
 	"description": "Documentation generator",
 	"main": "index.js",
 	"preferGlobal": true,

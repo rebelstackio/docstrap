@@ -37,9 +37,8 @@
 		const _config = getConfigFile();
 		fromDir(_currenBase + '/' + dir + '/', new RegExp('\.(html)$'),(fn) => {
 			const _htmlView = fs.readFileSync(fn, 'utf8')
-			parseConfigToHTML(_htmlView, _config, (newHTML) => {
-				fs.writeFileSync(fn, newHTML)
-			});
+			const newHTML = parseConfigToHTML(_htmlView, _config)
+			fs.writeFileSync(fn, newHTML)
 		});
 	}
 	/**

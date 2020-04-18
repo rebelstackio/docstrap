@@ -1,8 +1,13 @@
 (() => {
 	const fs = require('fs-extra');
 	const path = require('path');
-
-	function parseConfigToHTML(htmlSTR, config, callback) {
+	/**
+	 * Write config varibles into html's from the template
+	 * @param {String} htmlSTR Html file string
+	 * @param {*} config JS Object with configurations variables
+	 * @returns {String} new Html string
+	 */
+	function parseConfigToHTML(htmlSTR, config) {
 		const varMatch = htmlSTR.match(new RegExp('(?<=\{\{).+?(?=\}\})','g'));
 		let resp = htmlSTR;
 		varMatch.forEach((_v) => {
@@ -12,7 +17,7 @@
 			}
 			resp = resp.replace(new RegExp(`\{\{${_v}\}\}`, 'g'), value)
 		});
-		callback(resp)
+		return resp;
 	}
 
 	/**
