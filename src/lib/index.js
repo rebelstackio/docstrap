@@ -2,7 +2,7 @@
 	const fs = require('fs-extra');
 	const _currenBase = process.cwd();
 	const _libBase = __dirname.slice(0,-3);
-	const { parseConfigToHTML } = require('../utils');
+	const { parseConfigToHTML, fromDir } = require('../utils');
 
 	function writeTemplate (dir, callback) {
 		if(fs.existsSync(dir)) {
@@ -25,9 +25,12 @@
 	 */
 	function _fillTemplate(dir) {
 		const _config = getConfigFile();
+		fromDir(_currenBase + '/' + dir + '/', new RegExp('\.(html)$'),(fn) => {
+			console.log(fn);
+			//const _htmlView = fs.readFileSync(fn)
+		})
 		const _homeView = fs.readFileSync(_currenBase + '/' + dir + '/index.html', 'utf8');
 		parseConfigToHTML(_homeView, _config, (newHTML) => {
-			//console.log(newHTML);
 			fs.writeFileSync(_currenBase + '/' + dir + '/index.html', newHTML)
 		});
 	}
