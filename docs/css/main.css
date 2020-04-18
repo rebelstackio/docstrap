@@ -8,6 +8,12 @@
 	/* default theme */
 	--default-d-color: #09569e;
 	--default-d-color-light: rgba(9, 86, 158, .5);
+	/* orange theme*/
+	--orange-color: #e48d0d;
+	--orange-color-light: rgba(228, 141, 13, .5);
+	/* fuchsia theme*/
+	--fuchsia-color: #e91e63;
+	--fuchsia-color-light: rgba(233, 30, 99, .5);
 	/* dark theme*/
 
 	--dark-color: #333333;
@@ -69,6 +75,44 @@ body {
 	color: var(--main-color) !important
 }
 /*</purple>*/
+/*<orange>*/
+.docs-theme-orange .main-header {
+	background-color: var(--orange-color) !important;
+}
+
+.docs-theme-orange .sumary pretty-button * {
+	color: var(--orange-color-light) !important;
+	border-color: var(--orange-color-light) !important;
+}
+
+.docs-theme-orange .sumary pretty-button *:hover {
+	color: var(--orange-color) !important;
+	border-color: var(--orange-color) !important;
+}
+
+.docs-theme-orange .benefits .porperty > svg {
+	color: var(--orange-color) !important
+}
+/*</orange>*/
+/*<fuchsia>*/
+.docs-theme-fuchsia .main-header {
+	background-color: var(--fuchsia-color) !important;
+}
+
+.docs-theme-fuchsia .sumary pretty-button * {
+	color: var(--fuchsia-color-light) !important;
+	border-color: var(--fuchsia-color-light) !important;
+}
+
+.docs-theme-fuchsia .sumary pretty-button *:hover {
+	color: var(--fuchsia-color) !important;
+	border-color: var(--fuchsia-color) !important;
+}
+
+.docs-theme-fuchsia .benefits .porperty > svg {
+	color: var(--fuchsia-color) !important
+}
+/*</fuchsia>*/
 
 /*---------------------------END-THEMES-------------------------------*/
 
