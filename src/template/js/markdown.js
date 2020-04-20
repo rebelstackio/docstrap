@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	getMD(box.getAttribute('md-path'), (err, text) => {
 		if (err) throw err;
 		writeMD(text, box);
-		addStyledCodeExamples()
+		addStyledCodeExamples();
+		if(typeof createSubMenuItems !== 'undefined') {
+			createSubMenuItems();
+		}
 	})
 })
 /**

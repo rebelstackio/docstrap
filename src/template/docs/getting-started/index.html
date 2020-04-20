@@ -51,19 +51,7 @@
 			icon="fas fa-play">
 				<div>
 					Getting Started
-					<ul>
-						<li>
-							<a href="#installation">Installation</a>
-						</li>
-						<li>
-							<a href="#metacomponents">MetaComponents</a>
-						</li>
-						<li>
-							<a href="#bindmetacomponentstometafluxstorage">Bind storage to components</a>
-						</li>
-						<li>
-							<a href="#usingmetacomponentinsideametacontainer">MetaContainer</a>
-						</li>
+					<ul id="d-menu-subs">
 					</ul>
 				</div>
 			</pretty-menu-item>
@@ -111,5 +99,18 @@
 		</div>
 	</div>
 	<script src="https://oreyes1991.github.io/prettyComponents/main.js"></script>
+	<script>
+		function createSubMenuItems(){
+			const ul = document.querySelector('#d-menu-subs');
+			const h2 = document.querySelectorAll('h2');
+			h2.forEach(_h => {
+				ul.innerHTML += `
+					<li>
+						<a href="#${_h.id}">${_h.innerText}</a>
+					</li>
+				`;
+			});
+		}
+	</script>
 </body>
 </html>

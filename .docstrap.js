@@ -27,5 +27,5 @@ exports.default = {
 			<img src="img/metaflux-logo-black.svg" alt="expressif logo">
 		</a>`
 	],
-	'repository': 'https://github.com/rebelstackio/docstrap.git'
+	'repository': 'https://github.com/rebelstackio/docstrap'
 }
