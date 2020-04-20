@@ -205,11 +205,11 @@ body {
 .footer a, a {
 	text-decoration: none;
 	color: var(--primary-bg);
-    transition: all .3s ease;
+	transition: all .3s ease;
 }
 
 .footer a:hover {
-    color: var(--primary-bg-hv);
+	color: var(--primary-bg-hv);
 }
 
 .md-content {
@@ -240,4 +240,14 @@ pretty-menu-item[type="group"] ul{
 	display: none;
 	list-style: none;
 	margin-left: 0 !important;
+}
+
+
+.socials > a {
+	color: #fff;
+	font-size: 28px;
+}
+
+.socials > a:hover {
+	color: rgba(255,255,255,.6);
 }

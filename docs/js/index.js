@@ -12,14 +12,6 @@ function headerListeners() {
 			document.location.pathname = route;
 		});
 	});
-	const discrod = document.querySelector('#content > .main-header .discord');
-	const gh = document.querySelector('#content > .main-header .gh');
-	discrod.addEventListener('click', () => {
-		window.open('https://discord.gg/HmuBCRb', '_blank');
-	});
-	gh.addEventListener('click', () => {
-		window.open('https://github.com/rebelstackio/metaflux', '_blank');
-	})
 }
 
 

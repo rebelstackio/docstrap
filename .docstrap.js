@@ -3,6 +3,7 @@ exports.default = {
 	'name': 'Docstrap',
 	'description': 'Docstrap is an open-source library, allows you to generate documentation web-view for your projects in a organize and lightweight way',
 	'discord': '#linktodiscord',
+	'stackoverflow': '#linkto-so',
 	'benefits': [
 		`<div class="porperty">
 			<i class="fas fa-feather-alt"></i>
