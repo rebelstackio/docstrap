@@ -4,18 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta property="og:title" content="Docstrap, Documentation Frequently Asked Questions">
+	<meta property="og:title" content="Docstrap, Blog overview">
 	<meta property="og:description" content="Docstrap is an open-source library, allows you to generate documentation web-view for your projects in a organize and lightweight way">
 	<meta property="og:type" content="website">
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/responsive.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
-
 	<script src="/js/markdown.js"></script>
 	<script src="/js/index.js/"></script>
 	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/atom-one-dark.min.css">
-	<title>Docstrap || FAQ</title>
+	<title>Docstrap || Blog overview {{date}}</title>
 </head>
 <body class="docs-theme-default">
 	<div id="content">
@@ -37,40 +36,22 @@
 		</div>
 <!--                                  MAIN MENU                                  -->
 		<pretty-menu offset-top="98">
-			<pretty-menu-item
-			action="CHANGE-VIEW"
-			action-data="/docs/overview/"
-			>
-				<div>
-					Overview
-				</div>
-			</pretty-menu-item>
-			<pretty-menu-item
-			action="CHANGE-VIEW"
-			action-data="/docs/getting-started/"
-			icon="fas fa-play">
-				<div>
-					Getting Started
-				</div>
-			</pretty-menu-item>
-			<pretty-menu-item
-			action="CHANGE-VIEW"
-			action-data="/docs/api/">
-				<div>API Reference</div>
-			</pretty-menu-item>
-			<pretty-menu-item
-			action="CHANGE-VIEW"
-			action-data="/docs/examples/"
-			>
+			{{menuItems}}
+			<!--
 				<div>Examples</div>
 			</pretty-menu-item>
-			<pretty-menu-item selected>
+			<pretty-menu-item
+			action="CHANGE-VIEW"
+			action-data="/docs/faq/">
 				<div>FAQ</div>
 			</pretty-menu-item>
+		-->
 		</pretty-menu>
 <!--                             MAIN CONTENT                                   -->
 		<div class="main-content">
-			<h1 id="faq">FAQ</h1>
+			<h1 id="docstrapblogoverview">Docstrap blog Overview</h1>
+<p>Welcome to the blog for docstrap, here the dev team will be leaving theit thoughts, ideas or just some explination, the obstacles and here you will be able to see the core, the hard of the beast, as we update this library will highlight pieces of code, sketches or diagrams that help us to conquer our goal.</p>
+<p>We love this community, that's why Docstrap is open source, we want you to get involved, to help us improve, perhaps report a bug in our <a href="https://github.com/rebelstackio/docstrap">repository</a>, or just forked and play with it and if you can improve something you can feel free to create a pull request, connect to our <a href="https://discord.gg/pRG332">discord</a> channel and pitch your ideas. </p>
 		</div>
 <!--                              FOOTER                                        -->
 		<div class="footer">

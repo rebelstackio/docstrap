@@ -2,7 +2,7 @@ exports.default = {
 	'theme': 'default',
 	'name': 'Docstrap',
 	'description': 'Docstrap is an open-source library, allows you to generate documentation web-view for your projects in a organize and lightweight way',
-	'discord': '#linktodiscord',
+	'discord': 'https://discord.gg/pRG332',
 	'stackoverflow': '#linkto-so',
 	'benefits': [
 		`<div class="porperty">
