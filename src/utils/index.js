@@ -15,7 +15,8 @@
 			if(typeof value === 'object') {
 				value = value.join('');
 			}
-			resp = resp.replace(new RegExp(`\{\{${_v}\}\}`, 'g'), value)
+			if(value !== undefined)
+				resp = resp.replace(new RegExp(`\{\{${_v}\}\}`, 'g'), value)
 		});
 		return resp;
 	}

@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const box = document.querySelector('.main-content');
+	addStyledCodeExamples();
+	if(typeof createSubMenuItems !== 'undefined') {
+		createSubMenuItems();
+	}
 	getMD(box.getAttribute('md-path'), (err, text) => {
 		if (err) throw err;
-		writeMD(text, box);
-		addStyledCodeExamples();
-		if(typeof createSubMenuItems !== 'undefined') {
-			createSubMenuItems();
-		}
+		//writeMD(text, box);
 	})
 })
 /**

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/responsive.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+
 	<script src="/js/markdown.js"></script>
 	<script src="/js/index.js/"></script>
 	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
@@ -74,8 +74,51 @@
 			</pretty-menu-item>
 		</pretty-menu>
 <!--                             MAIN CONTENT                                   -->
-		<div class="main-content" md-path="/docs/getting-started/getting-started.md">
-
+		<div class="main-content">
+			<h2 id="instalation">Instalation</h2>
+<pre><code class="bash language-bash">npm i @rebelstack-io/docstrap -g
+</code></pre>
+<h2 id="usage">Usage</h2>
+<pre><code class="bash language-bash">docstrap [-d --dir]
+</code></pre>
+<p>if no dir provided will generate documentation webview in docs folder</p>
+<h3 id="configurationfile">Configuration file</h3>
+<p>For better results is recomended to add a configuration file wich contains
+basic information such name of your project, keywords, views sections and more. This file must be in the route where you execute the docstrap command with the name .docstrap.js.</p>
+<p>this is not mandatory, it will generate the view eather way without a configuration file, you latter can modify your just generated HTML files with the info for your project.</p>
+<h2 id="documentationstructure">Documentation structure</h2>
+<pre><code>.
++-- community
+|    +-- index.html
++-- css
+|    +-- general.css
+|    +-- main.css
+|    +-- responsive.css
++-- docs
+|    +-- api
+|    |   +-- api-reference.md
+|    |   +-- index.html
+|    +-- examples
+|    |   +-- examples.md
+|    |   +-- index.html
+|    +-- faq
+|    |   +-- faq.md
+|    |   +-- index.html
+|    +-- getting-started
+|    |   +-- getting-started.md
+|    |   +-- index.html
+|    +-- overview
+|    |   +-- overview.md
+|    |   +-- index.html
++-- img
+|    +-- default-logo-white.svg
+|    +-- default-logo.svg
++-- js
+|    +-- index.js
+|    +-- markdown.js
++-- index.html
+</code></pre>
+<p>Notice that there is some html files with .md files, the idea is to keep writing your documentation has you're used to, we then parse every md file to the web vew, all this is done in the client side, so you don't have to build your documentation with every change.</p>
 		</div>
 <!--                              FOOTER                                        -->
 		<div class="footer">
