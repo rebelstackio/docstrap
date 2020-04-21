@@ -48,4 +48,4 @@ this is not mandatory, it will generate the view eather way without a configurat
 |	+-- markdown.js
 +-- index.html
 ```
-Notice that there is some html files with .md files, the idea is to keep writing your documentation has you're used to, we then parse every md file to the web vew, all this is done in the client side, so you don't have to build your documentation with every change.
+Notice that there are some HTML files with .md files, the idea is to keep writing your documentation as you're used to, we then parse every MD file to the web view, all this is done in the server-side, so your HTML files will be fully statics helping with loading time and SEO, so don't forget to build your docstrap when a change to the .md files, or just leave it to Travis, Jenkins or the CI of your choice.
