@@ -238,11 +238,14 @@ pretty-menu-item {
 pretty-menu::after {
 	position: absolute;
 }
-
+/*-------------------- DOCS CONTENT ------------------*/
 .md-content {
 	margin-left: 250px;
 	& ul {
 		padding-left: 20px;
+	}
+	&.no-menu {
+		margin-left: 0;
 	}
 }
 
@@ -254,4 +257,11 @@ pretty-menu::after {
 
 main.page-content {
 	position: relative;
+}
+
+code.highlighter-rouge {
+	padding: 0 5px;
+	background-color: #282c34;
+	margin: 5px;
+	color: #fff;
 }

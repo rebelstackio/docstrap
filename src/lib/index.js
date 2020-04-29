@@ -6,13 +6,10 @@
 	function writeTemplate (dir) {
 		if(fs.existsSync(dir)) {
 			console.log('path exist, .MD files won\'t be override');
-			//TODO: override
 			try {
+				const regEx = new RegExp('\.(md|yml|lock|gitignore)$|Gemfile', 'g');
 				fs.copySync(_libBase + 'template', _currenBase + '/' + dir, {filter: (path) => {
-					if(path.match(new RegExp('\.(md)$')) !== null) {
-						return false;
-					}
-					return false;
+					return !regEx.test(path);
 				}});
 			} catch (err) {
 				console.log('Error writing template => ', err);

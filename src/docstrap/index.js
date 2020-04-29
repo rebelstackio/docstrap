@@ -12,17 +12,10 @@
 		});
 
 		commandObject.action((dir) => {
-			//console.log('start action');
 			if (commandObject.dir) {
-				//console.log('with dir =>', commandObject.dir)
-				writeTemplate(commandObject.dir, () => {
-
-				})
+				writeTemplate(commandObject.dir)
 			} else {
-				writeTemplate('docs/', () => {
-
-				})
-				//console.log('default docs folder')
+				writeTemplate('docs/')
 			}
 			process.exit(0);
 		});
