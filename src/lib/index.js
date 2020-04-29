@@ -3,7 +3,7 @@
 	const _currenBase = process.cwd();
 	const _libBase = __dirname.slice(0,-3);
 
-	function writeTemplate (dir, callback) {
+	function writeTemplate (dir) {
 		if(fs.existsSync(dir)) {
 			console.log('path exist, .MD files won\'t be override');
 			//TODO: override
