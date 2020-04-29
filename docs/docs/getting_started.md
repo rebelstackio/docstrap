@@ -11,50 +11,72 @@ npm i @rebelstack-io/docstrap -g
 ```
 
 ## Usage
+- Generate your template
 ```bash
 docstrap [-d --dir]
 ```
 if no dir provided will generate documentation webview in docs folder
 
-### Configuration file
-For better results is recomended to add a configuration file wich contains
-basic information such name of your project, keywords, views sections and more. This file must be in the route where you execute the docstrap command with the name .docstrap.js.
+- Build your template
+```bash
+bundle exec jekyll build
+```
+this will generate ```_site/``` folder with the plain hmtl project.
 
-this is not mandatory, it will generate the view eather way without a configuration file, you latter can modify your just generated HTML files with the info for your project.
+- Test it locally
+```bash
+bundle exec jekyll serve
+```
+this will create a web-server in your local port 4000.
+
+### Configuration file
+Don't forget to check the _config.yml in the geneted template.
 
 ## Documentation structure
 ```
 .
-+-- community
-|	+-- index.html
-+-- css
-|	+-- general.css
-|	+-- main.css
-|	+-- responsive.css
-+-- docs
-|	+-- api
-|	|	+-- api-reference.md
-|	|	+-- index.html
-|	+-- examples
-|	|	+-- examples.md
-|	|	+-- index.html
-|	+-- faq
-|	|	+-- faq.md
-|	|	+-- index.html
-|	+-- getting-started
-|	|	+-- getting-started.md
-|	|	+-- index.html
-|	+-- overview
-|	|	+-- overview.md
-|	|	+-- index.html
-+-- img
-|	+-- default-logo-white.svg
-|	+-- default-logo.svg
-+-- js
-|	+-- index.js
-|	+-- markdown.js
-+-- index.html
+├── 404.html
+├── assets
+│   ├── img
+│   │   ├── default-logo.svg
+│   │   ├── default-logo-white.svg
+│   │   ├── expressif-boxmodel.jpeg
+│   │   └── metaflux-logo-black.svg
+│   ├── js
+│   │   ├── index.js
+│   │   └── store.js
+│   └── main.scss
+├── blog.md
+├── community.md
+├── _config.yml
+├── docs
+│   ├── api.md
+│   ├── examples.md
+│   ├── faq.md
+│   ├── getting_started.md
+│   └── overview.md
+├── Gemfile
+├── Gemfile.lock
+├── _includes
+│   ├── blog_menu.html
+│   ├── footer.html
+│   ├── header.html
+│   └── sidebar.html
+├── index.md
+├── _layouts
+│   ├── blog.html
+│   ├── community.html
+│   ├── default.html
+│   ├── docs.html
+│   └── home.html
+├── LICENSE
+├── _posts
+│   └── 2020-04-21-welcome-to-docstrap.markdown
+└── _sass
+    ├── docstrap
+    │   └── base.scss
+    └── docstrap.scss
 ```
 
 ## Notes
-Notice that there are some HTML files with .md files, the idea is to keep writing your documentation as you're used to, we then parse every MD file to the web view, all this is done in the server-side, so your HTML files will be fully statics helping with loading time and SEO, so don't forget to build your docstrap when a change to the .md files, or just leave it to Travis, Jenkins or the CI of your choice.
+Notice that every view is represented by a markdown file, the convection is ```<name_view>.md``` inside you can update the content and jekyll will build that into you html view
