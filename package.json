@@ -1,0 +1,45 @@
+{
+	"name": "@rebelstack-io/docstrap",
+	"version": "v1.0.1",
+	"description": "Documentation generator",
+	"main": "index.js",
+	"preferGlobal": true,
+	"bin": {
+		"docstrap": "index.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rebelstackio/docstrap.git"
+	},
+	"keywords": [
+		"nodejs",
+		"documentation",
+		"generator"
+	],
+	"contributors": [
+		{
+			"name": "pablolimo",
+			"url": "https://github.com/pablolimo"
+		},
+		{
+			"name": "Osmar Reyes",
+			"email": "osmarreyesst@gmail.com",
+			"url": "https://github.com/oreyes1991"
+		}
+	],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rebelstackio/docstrap/issues"
+	},
+	"homepage": "https://github.com/rebelstackio/docstrap#readme",
+	"dependencies": {
+		"commander": "^5.0.0",
+		"fs-extra": "^9.0.0",
+		"gradient-string": "^1.2.0",
+		"showdown": "^1.9.1"
+	}
+}
