@@ -5,7 +5,7 @@
 	function docstrap(program) {
 		const commandObject = program
 		.description('create documentation webview in a dir, or docs/ if no dir supplied')
-		.usage('[dir]');
+		.usage('docstrap [ -d | --dir=<path>] [<args>]');
 
 		_options.forEach(option => {
 			commandObject.option(...option.command);

@@ -9,7 +9,7 @@ npm i @rebelstack-io/docstrap -g
 
 ## Usage
 ```bash
-docstrap [-d --dir]
+docstrap [ -d | --dir=<path>] [<args>]
 ```
 if no dir provided will generate documentation webview in docs folder
 
