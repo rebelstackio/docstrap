@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
 		end
 	end
 
-	config.vm.define "prvm" do |prvm|
+	config.vm.define "prvm", autostart: false do |prvm|
 		prvm.vm.hostname = "prvm.test"
 		prvm.vm.provision "shell", inline: $script
 		prvm.vm.provision :shell do |s|
