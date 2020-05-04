@@ -40,6 +40,9 @@ name: Docstrap
 repository: https://github.com/rebelstackio/docstrap
 discord: https://discord.gg/pRG332
 stackoverflow: \#linkto-so
+themecolor: default
+clearlogo: assets/img/default-logo-white.svg
+darklogo: assets/img/default-logo.svg
 
 # Build settings
 markdown: kramdown
