@@ -2,10 +2,10 @@
 	"name": "@rebelstack-io/docstrap",
 	"version": "v1.0.1",
 	"description": "Documentation generator",
-	"main": "index.js",
+	"main": "docstrap.js",
 	"preferGlobal": true,
 	"bin": {
-		"docstrap": "index.js"
+		"docstrap": "docstrap.js"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
